@@ -1,10 +1,8 @@
-import { withNextVideo } from "next-video/process";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  env: {
-    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-  },
+  /* config options here */
+  reactCompiler: true,
 };
 
-export default withNextVideo(nextConfig);
+export default nextConfig;
