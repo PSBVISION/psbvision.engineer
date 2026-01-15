@@ -11,6 +11,17 @@ interface CallToActionProps {
   preText2?: string;
 }
 
+/**
+ * Call-to-action button with a profile thumbnail, animated shimmer, and customizable pre-text and link.
+ *
+ * @param profileImage - URL or path to the profile image shown in the button (defaults to "/psbvision.jpg").
+ * @param profileAlt - Alt text for the profile image (defaults to "Profile").
+ * @param linkText - Text displayed on the CTA button (defaults to "Book a Free Call").
+ * @param linkUrl - Destination URL opened in a new tab when the CTA is clicked (defaults to "https://cal.com/psbvision/15min").
+ * @param preText1 - First line of italic pre-text displayed above the button (defaults to "Have a Project in Mind?").
+ * @param preText2 - Second line of italic pre-text displayed above the button (defaults to "Let’s discuss your idea and plan the next steps.").
+ * @returns The rendered JSX element for the call-to-action component.
+ */
 export default function CallToAction({
   profileImage = "/psbvision.jpg",
   profileAlt = "Profile",

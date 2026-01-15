@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   description: "Punit Singh Bisht - Full-Stack Developer Portfolio",
 };
 
+/**
+ * Defines the application's root HTML structure and applies the configured fonts.
+ *
+ * @param children - React nodes to render inside the document body
+ * @returns A JSX element for the root HTML document with lang="en", a `hydrated` html class, and body classes that apply the configured fonts; contains `children` within the body
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

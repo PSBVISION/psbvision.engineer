@@ -43,6 +43,16 @@ interface ShadowOverlayProps {
   className?: string;
 }
 
+/**
+ * Linearly maps a numeric value from one range to another.
+ *
+ * @param value - The input value to map.
+ * @param fromLow - Lower bound of the input range.
+ * @param fromHigh - Upper bound of the input range.
+ * @param toLow - Lower bound of the target range.
+ * @param toHigh - Upper bound of the target range.
+ * @returns The mapped value in the target range. If `fromLow` equals `fromHigh`, returns `toLow`.
+ */
 function mapRange(
   value: number,
   fromLow: number,
@@ -64,6 +74,18 @@ const useInstanceId = (): string => {
   return instanceId;
 };
 
+/**
+ * Render a full-size stylized shadow/overlay with an optional turbulence-based animated shader, masked color layer, and a centered call-to-action with social links.
+ *
+ * @param sizing - Controls mask sizing; "stretch" forces the mask to fill the container, otherwise the mask uses "cover".
+ * @param color - Background color applied to the masked layer.
+ * @param animation - When provided and `animation.scale > 0`, enables an SVG turbulence/displacement filter and a looping hue-rotation. Relevant fields: `scale` (controls displacement intensity) and `speed` (controls animation tempo).
+ * @param noise - Optional top-layer texture; `noise.opacity` controls overlay opacity and `noise.scale` controls the tiling/scale of the repeating noise image.
+ * @param style - Inline styles applied to the outer container.
+ * @param className - CSS class names applied to the outer container.
+ *
+ * @returns A React element containing the overlay (animated when `animation` is enabled), the centered content block (title, subtitle, social links, and CallToAction), and an optional noise overlay.
+ */
 export function Component({
   sizing = "fill",
   color = "rgba(128, 128, 128, 1)",
